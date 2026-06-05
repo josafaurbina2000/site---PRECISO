@@ -1,0 +1,6 @@
+{
+  "name": "Preciso",
+  "description": "Publique seu problema. Encontre a solução. Conecta pessoas que possuem necessidades com pessoas capazes de resolvê-las.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

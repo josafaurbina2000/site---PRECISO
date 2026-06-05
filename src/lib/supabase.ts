@@ -1,0 +1,16 @@
+import { createClient } from "@supabase/supabase-js";
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "";
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || "";
+
+// Verifica se as chaves reais foram fornecidas e não são placeholders
+export const isSupabaseConfigured = 
+  Boolean(supabaseUrl) && 
+  Boolean(supabaseAnonKey) && 
+  supabaseUrl !== "https://seu-projeto.supabase.co" &&
+  !supabaseUrl.includes("placeholder-project");
+
+export const supabase = createClient(
+  supabaseUrl || "https://placeholder-project.supabase.co",
+  supabaseAnonKey || "placeholder-anon-key"
+);
